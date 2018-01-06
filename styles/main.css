@@ -160,7 +160,7 @@ height: 3rem;
 right: 0;
 color: #9B8CA5;
 text-indent: -2.8rem;
-background-image: url(file:///Macintosh%20HD/Desk/PENDIENTES/FOTOS/GENERAL/share.svg);
+background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/share.svg);
 background-repeat:no-repeat;
 display:block;
 background-size: contain;
@@ -242,30 +242,30 @@ filter: hue-rotate(370deg) saturate(7) brightness(0.70);*/
 }
 .HOME {background-image: url(https://rawgit.com/akidaniel/darezd/gh-pages/imagenes/ICONOS/BACK.svg)}
 
-.BACK {background-image: url(file:///Macintosh%20HD/Desk/PENDIENTES/FOTOS/GENERAL/BACK.svg)}
+.BACK {background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/BACK.svg)}
 
 .FCBK {
-background-image: url(file:///Macintosh%20HD/Desk/PENDIENTES/FOTOS/GENERAL/FCBK.svg);
+background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/FCBK.svg);
 }
 
 .TWITTER {
-background-image: url(file:///Macintosh%20HD/Desk/PENDIENTES/FOTOS/GENERAL/TWITTER.svg);
+background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/TWITTER.svg);
 }
 
 .GPLUS {
-background-image: url(file:///Macintosh%20HD/Desk/PENDIENTES/FOTOS/GENERAL/GPLUS.svg);
+background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/GPLUS.svg);
 }
 
 .MAIL {
-background-image: url(file:///Macintosh%20HD/Desk/PENDIENTES/FOTOS/GENERAL/MAIL.svg);
+background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/MAIL.svg);
 }	
 
 .PINTEREST {
-background-image: url(file:///Macintosh%20HD/Desk/PENDIENTES/FOTOS/GENERAL/PINTEREST.svg);
+background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/PINTEREST.svg);
 }
 
 .ETSY {
-background-image: url(file:///Macintosh%20HD/Desk/PENDIENTES/FOTOS/GENERAL/Etsy.png);
+background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/Etsy.png);
 }
 .MAIL:hover, .GPLUS:hover, .TWITTER:hover, .FCBK:hover, .BACK:hover, .HOME:hover, .pre:hover, .post:hover, .PINTEREST:hover, .ETSY:hover {
 -moz-filter: hue-rotate(0deg) saturate(0.2) brightness(8);
