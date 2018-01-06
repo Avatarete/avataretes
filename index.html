@@ -60,7 +60,16 @@ $('img').bind('contextmenu', function(e) {
 <div class="BOTONERA">
 <h4>Buy on: <a class="ETSY" style="display: inline-block; padding:0;" href="https://www.etsy.com/es/listing/570129608/pendientes-personalizados?ref=shop_home_active_1" title="By on Etsy"></a></h4>
 <h4>
-Share on: <a class="FCBK" style="display: inline-block; padding:0;" href="https://akidaniel.github.io/avataretes/" title="Avataretes"></a>
+Share on:
+<a class="FCBK" style="display: inline-block; padding:0;" rel="img_src" href=""
+    onclick="popUp=window.open(
+        'https://www.facebook.com/sharer.php?u=https://akidaniel.github.io/avataretes/',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Share on Facebook">
+    <!--<i class="visuallyhidden">share on facebook</i>-->
+</a>
 <a class="TWITTER" style="display:inline-block; padding:0;" rel="nofollow"
     href="https://twitter.com/"
     onclick="popUp=window.open(
@@ -473,7 +482,8 @@ Share on: <a class="FCBK" style="display: inline-block; padding:0;" href="https:
 </div>
 <!--Modelo01-->
 <div id="infomodelo08" class="popup"><a onClick="history.go(-1);return true;"><img src="https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/MODELO08.jpg" alt="Modelo08" title="Earrings Model 08"></a>
-<div class="SOCIAL"><a class="BACK" onClick="history.go(-1);return true;" title="Go back"></a>
+<div class="SOCIAL">
+<a class="BACK" onClick="history.go(-1);return true;" title="Go back"></a>
 <a class="FCBK" rel="img_src" href=""
     onclick="popUp=window.open(
         'https://www.facebook.com/sharer.php?u=https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/MODELO08.jpg',
