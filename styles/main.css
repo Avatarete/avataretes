@@ -304,8 +304,11 @@ background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GEN
 filter:hue-rotate(330deg) saturate(10) brightness(0.5);
 }
 /*FIN BOTON SOCIAL*/
-
-@media only screen and (min-width:100px) and (max-width: 530px) {
+@media only screen and (min-width:750px) and (max-width: 935px) {
+	.container {max-width: 15rem;
+max-height: 15rem;}
+}
+@media only screen and (min-width:320px) and (max-width: 750px) {
 	/* and (min-height:320px)*/
 .wrap {margin: 0 auto ; padding: 0 auto;}
 
@@ -333,4 +336,10 @@ margin: 1rem 1rem auto;
 
 }
 
-
+@media only screen and (min-width:100px) and (max-width: 320px) {
+	/* and (min-height:320px)*/
+.container {
+min-width: 15rem;
+min-height: 15rem;
+}
+}
