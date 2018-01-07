@@ -20,6 +20,11 @@ text-align:left; text-decoration:none;
 	outline: 0;
 }
 
+body {box-sizing:border-box;
+padding:0;
+margin:0;
+background-color: #f3e4ff;}
+
 .wrap {
 /*margin: 2rem auto;
 padding: 0 2rem 0 2rem;*/
@@ -123,7 +128,7 @@ line-height:0rem;
 letter-spacing: -0.05rem;
 }
 
-.DESCRIPTION {margin: 0rem 0.25rem;}
+.DESCRIPTION {margin: 0 0.25rem;}
 /*.NAME {margin-bottom:0.1rem;
 font-weight:400;
 font-size:2.5rem;
@@ -312,6 +317,10 @@ font-size:2.75rem;
 h4 {
 margin: 1rem 1rem auto;
 
-}}
+}
+
+.DESCRIPTION {margin: 0 2rem;}
+
+}
 
 
