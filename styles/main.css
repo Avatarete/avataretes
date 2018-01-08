@@ -195,6 +195,46 @@ display:block;
 background-size: contain;
 cursor:pointer;}
 
+/*SOCIAL ACCORDION*/
+.menu_opener {
+  display: none;
+}
+
+.menu_opener:checked ~ .FCBK {
+  left: 0.1rem;
+}
+.menu_opener:checked ~ .TWITTER {
+left: 0.2rem;
+}
+.menu_opener:checked ~ .GPLUS {
+left: 0.3rem;
+}
+.menu_opener:checked ~ .MAIL {
+left: 0.4rem;
+}
+
+.link_general {
+position: relative;
+-webkit-transition: all 0.4s ease;
+transition: all 0.4s ease;
+}
+.share {
+background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/share.svg);
+background-repeat:no-repeat;
+width: 2.5rem;
+height: 2.5rem;
+display:inline-block;
+position:relative;
+bottom: 0; 
+right:0;
+background-size: contain;
+cursor:pointer;
+background-color: #F3E4FF;
+z-index: 10;
+border-radius: 1.3rem;
+}
+/*FIN SOCIAL ACCORDION*/
+
 /* pop-up image */
 
 .popup {
