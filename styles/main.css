@@ -70,10 +70,6 @@ flex: 0 auto;
 }
 
 
-
-
-
-
 footer {width: 100%;
 text-align: center;
 padding: 2rem 0 2rem;
@@ -81,8 +77,8 @@ background-color: rgba(116, 118, 145, 0.6);}
 
 
 img.photo {
-  height: 49%;
-  width: 49%;
+height: 49%;
+width: 49%;
 cursor: zoom-in;
 /*cursor:url(file:///Macintosh HD/Desk/PENDIENTES/FOTOS/GENERAL/zoom.cur), -moz-zoom-in;*/
 padding-bottom: 0.25rem;
@@ -101,10 +97,22 @@ display: -moz-box;
 display: -ms-flexbox;
 display: -webkit-flex;
 display: flex;
+justify-content: center;
+height: 5rem; top:0; right:5rem;
+/*flex-direction: row;
 flex-wrap: wrap;
 position: relative;
 justify-content: center;
+margin-right: auto;
+margin-left: auto;
+text-align:left;
+flex-grow: 1;
+flex-basis: content; */
 }
+
+.TOP {position:absolute;}
+
+
 #ZOCALO {
 overflow: hidden;
 position: relative;
@@ -124,6 +132,7 @@ width: 100%;
   justify-content: center;
   text-align: center;
   width: 100%;
+  display:none;
 }
 
 /*TEXTOS*/
@@ -151,7 +160,7 @@ text-align:center;
 padding: 0.5rem 2rem 0;
 text-align:center;
 color: #747691;
-letter-spacing: 0.15rem;
+letter-spacing: 0.03rem;
 line-height: 0rem;
 font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-weight:200;
@@ -162,11 +171,14 @@ font-size:1rem;
 text-align:center;
 color: #747691;
 font-weight:100;
-margin: 1rem 1rem auto;
 /*padding:0 2rem;
 letter-spacing: 0.15rem;*/
+margin-right: 2rem;
 }
 h4.BUY {padding: 0 0.5rem; line-height: 0.6rem;}
+h4.BUTTON {line-height: 0rem; cursor: pointer;
+padding-bottom: 2rem;
+/*background-color: red;*/}
 
 .lightbox-text-link {font-family: 'Courgette', cursive;
 font-size:1rem;
@@ -191,48 +203,89 @@ color: #9B8CA5;
 text-indent: -2.8rem;
 background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/share.svg);
 background-repeat:no-repeat;
-display:block;
 background-size: contain;
 cursor:pointer;}
 
 /*SOCIAL ACCORDION*/
-.menu_opener {
-  display: none;
-}
+.menu_buy {display: none;}
+.menu_lang {display: none;}
+.menu_share {display: none;}
 
-.menu_opener:checked ~ .FCBK {
-  left: 0.1rem;
-}
-.menu_opener:checked ~ .TWITTER {
-left: 0.2rem;
-}
-.menu_opener:checked ~ .GPLUS {
-left: 0.3rem;
-}
-.menu_opener:checked ~ .MAIL {
-left: 0.4rem;
-}
+.menu_buy:checked ~ label h4.BUTTON {color: #c2c;}
+.menu_lang:checked ~ label h4.BUTTON {color: #c2c;}
+.menu_share:checked ~ label h4.BUTTON {color: #c2c;}
+
 
 .link_general {
 position: relative;
 -webkit-transition: all 0.4s ease;
 transition: all 0.4s ease;
 }
-.share {
-background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/share.svg);
-background-repeat:no-repeat;
-width: 2.5rem;
-height: 2.5rem;
-display:inline-block;
-position:relative;
-bottom: 0; 
-right:0;
-background-size: contain;
-cursor:pointer;
-background-color: #F3E4FF;
-z-index: 10;
-border-radius: 1.3rem;
-}
+
+/*.FCBK, .TWITTER, .GPLUS, .MAIL, .BACK, .HOME, .PINTEREST, .ETSY {
+display: inline-block;}*/
+
+.ETSY {left: 0rem; top: -3.5rem; visibility:hidden; -moz-opacity:.00; 
+filter:alpha(opacity=00); 
+opacity:.00;}
+
+.menu_buy:checked ~ .ETSY {left: 0rem; top: -2rem; visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;}
+
+.FCBK {left: 0rem; top:-3.5rem; visibility:hidden; -moz-opacity:.00; 
+filter:alpha(opacity=00); 
+opacity:.00;}
+.TWITTER {left: 0rem; top:-6rem; visibility:hidden; -moz-opacity:.00; 
+filter:alpha(opacity=00); 
+opacity:.00;}
+.GPLUS {left: 0rem; top:-8.5rem; visibility:hidden; -moz-opacity:.00; 
+filter:alpha(opacity=00); 
+opacity:.00;}
+.MAIL {left: 0rem; top:-11rem; visibility:hidden; -moz-opacity:.00; 
+filter:alpha(opacity=00); 
+opacity:.00;}
+
+.menu_share:checked ~ .FCBK {left: -4.1rem; top:-2rem; visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;}
+.menu_share:checked ~ .TWITTER {left: -1.35rem; top:-4.5rem; visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;}
+.menu_share:checked ~ .GPLUS {left: 1.35rem; top:-7rem; visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;}
+.menu_share:checked ~ .MAIL {left: 4rem; top:-9.5rem; visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;}
+
+.UK {left: 0.9rem; top: -3.5rem; visibility:hidden; -moz-opacity:.00; 
+filter:alpha(opacity=00); 
+opacity:.00;}
+.ES {left: 0.9rem; top: -6rem; visibility:hidden; -moz-opacity:.00; 
+filter:alpha(opacity=00); 
+opacity:.00;}
+.FR {left: 0.9rem; top: -8.5rem; visibility:hidden; -moz-opacity:.00; 
+filter:alpha(opacity=00); 
+opacity:.00;}
+
+.menu_lang:checked ~ .UK {left: -2.1rem; top: -2rem; visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;}
+.menu_lang:checked ~ .ES {left: 0.9rem; top: -4.5rem; visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;}
+.menu_lang:checked ~ .FR {left: 3.9rem; top: -7rem; visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;}
+
+.column {
+/*position: relative;
+width: 6.5rem;
+padding: 0;
+box-sizing: border-box;*/ 
+} 
+
 /*FIN SOCIAL ACCORDION*/
 
 /* pop-up image */
@@ -256,9 +309,7 @@ display: block;
 -webkit-animation-name: fadein 0,2s; 
 animation-name: fadein;
 animation-duration: 0.2s;
-
 }
-
 
 .popup img {
 max-width:90%;
@@ -294,7 +345,7 @@ margin-left: 0.25rem;}
 
 
 /*BOTON SOCIAL*/
-.FCBK, .TWITTER, .GPLUS, .MAIL, .BACK, .HOME, .PINTEREST, .ETSY {
+.share, .UK, .ES, .FR, .FCBK, .TWITTER, .GPLUS, .MAIL, .BACK, .HOME, .PINTEREST, .ETSY {
 display:block;
 text-indent:-625rem;
 width:2.5rem;
@@ -303,12 +354,24 @@ background-repeat:no-repeat;
 background-size:contain;
 cursor: pointer;
 padding: 0 0.5rem 0 0;
+z-index:222;
 /*moz-filter: hue-rotate(370deg) saturate(7) brightness(0.70);
 -o-filter: hue-rotate(370deg) saturate(7) brightness(0.70);
 -ms-filter: hue-rotate(370deg) saturate(7) brightness(0.70);
 -webkit-filter: hue-rotate(370deg) saturate(7) brightness(0.70);
 filter: hue-rotate(370deg) saturate(7) brightness(0.70);*/
 }
+
+
+.share {
+background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/share.svg);
+display:inline-block;
+position:relative;
+bottom: 0; 
+right:0;
+z-index: 230;
+}
+
 .HOME {background-image: url(https://rawgit.com/akidaniel/darezd/gh-pages/imagenes/ICONOS/BACK.svg)}
 
 .BACK {background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/BACK.svg)}
@@ -335,8 +398,21 @@ background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GEN
 
 .ETSY {
 background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/Etsy.png);
+margin-left: 0.35rem;
 }
-.MAIL:hover, .GPLUS:hover, .TWITTER:hover, .FCBK:hover, .BACK:hover, .HOME:hover, .pre:hover, .post:hover, .PINTEREST:hover, .ETSY:hover {
+
+.UK {background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/uk.png);}
+
+.ES {background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/spain.png);}
+
+.FR {background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/france.png);}
+
+.lang {background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GENERAL/lang.svg);
+margin-left:0.9rem; 
+}
+
+
+.MAIL:hover, .GPLUS:hover, .TWITTER:hover, .FCBK:hover, .BACK:hover, .HOME:hover, .pre:hover, .post:hover, .PINTEREST:hover {
 -moz-filter: hue-rotate(0deg) saturate(0.2) brightness(8);
 -o-filter: hue-rotate(0deg) saturate(0.2) brightness(8);
 -ms-filter: hue-rotate(0deg) saturate(0.2) brightness(8);
@@ -344,9 +420,12 @@ background-image: url(https://rawgit.com/akidaniel/avataretes/gh-pages/FOTOS/GEN
 filter:hue-rotate(330deg) saturate(10) brightness(0.5);
 }
 /*FIN BOTON SOCIAL*/
-@media only screen and (min-width:750px) and (max-width: 935px) {
-	.container {max-width: 15rem;
+@media only screen and (min-width:750px) and (max-width: 1150px) {
+.container {max-width: 15rem;
 max-height: 15rem;}
+.TOP {position:relative; right:0}
+.DESCRIPTION {margin: 0 2rem;}
+.BOTONERA {width:100%;}
 }
 @media only screen and (min-width:320px) and (max-width: 750px) {
 	/* and (min-height:320px)*/
@@ -368,12 +447,11 @@ font-size:2.75rem;
 }
 
 h4 {
-margin: 1rem 1rem auto;
-
+margin: 1.5rem 1rem 1rem 0;
 }
-
+.BOTONERA {width:100%;}
 .DESCRIPTION {margin: 0 2rem;}
-
+.TOP {position:relative; right:0}
 }
 
 @media only screen and (min-width:100px) and (max-width: 320px) {
@@ -382,4 +460,6 @@ margin: 1rem 1rem auto;
 min-width: 15rem;
 min-height: 15rem;
 }
+.TOP {position:relative; right:0}
+
 }

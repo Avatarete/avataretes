@@ -41,9 +41,8 @@
 
   gtag('config', 'UA-112460895-1');
 </script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script type="text/javascript">
+<script>
 $(document).ready(function() {
 $('.photo').click(function() {
   $(this).toggleClass('expandImage')
@@ -58,64 +57,111 @@ $('img').bind('contextmenu', function(e) {
 });*/
 
 });
+
 </script>
+
+<script>
+$(document).ready(function() {
+
+var display = function(block_name, title) {
+  // Toogle Block
+  $('.CENTER').css('display', 'none');
+  $('#' + block_name + '').css('display', 'block');
+}
+
+$('.UK').on('click', function() {
+  display('LUK', $(this));
+});
+
+$('.ES').on('click', function() {
+  display('LES', $(this));
+});
+
+$('.FR').on('click', function() {
+  display('LFR', $(this));
+});
+});
+
+</script>
+
+
+
 
 <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="styles/main.css"/>
+
+
+<style>#LUK {display:block;}</style>
 </head>
 
-<style type="text/css">
 
-.FCBK, .TWITTER, .GPLUS, .MAIL, .BACK, .HOME, .PINTEREST, .ETSY {
-display: inline-block;
-}
-
-.FCBK {
-left: -2.8rem;
-}
-
-.TWITTER {left:-5.6rem;
-}
-
-.GPLUS {left:-8.4rem;
-}
-
-.MAIL {left:-11.23rem;
-}
-
-</style>
 <body>
 
 <div class="wrap">
 
-<header class="CENTER">
+<header id="LUK" class="CENTER">
 <div>
-<h1 class="CABECERA">AvatarEarrings</h1>
+<h1 class="CABECERA">Avataretes</h1>
 </div>
-
-<!--<div class="ANCHO CENTER">
-<p class="NAME">DANIEL RAMIREZ</p></div>-->
 
 <div>
 <p class="DESTACADO">Custom Earrings Design</p></div>
 
-<div class="BOTONERA"><h4 class="DESCRIPTION">Illustration made from a photograph and printed on polyester.</h4><h4 class="DESCRIPTION">Double side earrings, handmade dome with epoxy resin and metal hooks.</h4></div>
+<div><h4 class="DESCRIPTION">Illustration made from a photograph and printed on polyester. Double side earrings, handmade dome with epoxy resin and metal hooks.</h4></div>
+</header>
 
 
-<div class="BOTONERA">
-<h4>Buy on: <a class="ETSY" style="display: inline-block; padding:0;" href="https://www.etsy.com" title="By on Etsy"  onclick="popUp=window.open(
-        'https://www.etsy.com/es/listing/570129608/pendientes-personalizados?ref=shop_home_active_1',
+<header id="LES" class="CENTER">
+<div>
+<h1 class="CABECERA">Avataretes</h1>
+</div>
+
+<div>
+<p class="DESTACADO">Pendientes personalizados</p></div>
+
+<div><h4 class="DESCRIPTION">Ilustraciones hechas desde una fotografía, impresas en poliester. Pendientes de doble cara, resaltados con resina epoxi y ganchos de metal.</h4></div>
+</header>
+
+<header id="LFR" class="CENTER">
+<div>
+<h1 class="CABECERA">Avataretes</h1>
+</div>
+
+<div>
+<p class="DESTACADO">Boucles d'oreilles personnalisées</p></div>
+
+<div><h4 class="DESCRIPTION">Illustrations réalisées à partir d'une photographie et imprimée en polyester. Boucles d'oreilles à double face, avec résine époxy et de crochets métalliques.</h4></div>
+</header>
+
+<div class="BOTONERA TOP">
+<div class="column column-one">
+<input type="checkbox" id="menu_buy_id" class="menu_buy">
+<label for="menu_buy_id" class="" onclick="if(document.getElementById('menu_buy_id').value) document.getElementById('menu_share_id').checked = false; if(document.getElementById('menu_buy_id').value) document.getElementById('menu_lang_id').checked = false;"><h4 class="BUTTON">Buy on:</h4></label>
+<a class="ETSY link_general" onclick="popUp=window.open(
+        'https://www.etsy.com/es/shop/Avatarete',
         'popupwindow',
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
-    return false"></a></h4>
-<h4>
-Share on:
+    return false" title="Avatarete on Etsy"></a>
+</div>
 
-<input type="checkbox" id="menu_opener_id" class="menu_opener">
-	  <label for="menu_opener_id" class="share"></label>
+<div class="column column-two">
+<input type="checkbox" id="menu_lang_id" class="menu_lang">
+<label for="menu_lang_id" class="" onclick="if(document.getElementById('menu_lang_id').value) document.getElementById('menu_share_id').checked = false; if(document.getElementById('menu_lang_id').value) document.getElementById('menu_buy_id').checked = false;"><h4 class="BUTTON">Language:</h4></label>
 
-<a class="FCBK link_general" style="display: inline-block; padding:0;" rel="img_src" href=""
+<a class="UK link_general" href="#" onclick="if(document.getElementByClassName('LANGUE UK').value) document.getElementByClassName('LANGUE ES').checked = false; ">
+</a>
+<a class="ES link_general" href="#">
+</a>
+<a class="FR link_general" href="#">
+</a>
+</div>
+
+<div class="column column-three">
+<input type="checkbox" id="menu_share_id" class="menu_share">
+<label for="menu_share_id" class=""  onclick="if(document.getElementById('menu_share_id').value) document.getElementById('menu_buy_id').checked = false; if(document.getElementById('menu_share_id').value) document.getElementById('menu_lang_id').checked = false;"><h4 class="BUTTON">Share:</h4></label>
+
+<a class="FCBK link_general" rel="img_src" href=""
     onclick="popUp=window.open(
         'https://www.facebook.com/sharer.php?u=https://avatarete.github.io/avataretes/',
         'popupwindow',
@@ -125,8 +171,7 @@ Share on:
     <!--<i class="visuallyhidden">share on facebook</i>-->
 </a>
    
-   
-<a class="TWITTER link_general" style="display:inline-block; padding:0;" rel="nofollow"
+<a class="TWITTER link_general" rel="nofollow"
     href="http://twitter.com"
     onclick="popUp=window.open(
         'https://twitter.com/intent/tweet?text=I%20like%20this%20page%20–&hashtags=avatarete,customearrings&url=https%3A%2F%2Favatarete.github.io/avataretes/&via=avataretes',
@@ -136,7 +181,7 @@ Share on:
     return false" title="Share on Twitter">
    <!-- <i class="visuallyhidden">share on twitter</i>--></a>
    
-<a class="GPLUS link_general" style="display:inline-block; padding:0;"  rel="nofollow"
+<a class="GPLUS link_general" rel="nofollow"
     href="https://www.plus.google.com/"
     onclick="popUp=window.open(
         'https://plus.google.com/share?url=https://avatarete.github.io/avataretes/',
@@ -147,15 +192,14 @@ Share on:
     <!--<i class="visuallyhidden">share on google plus</i>-->
 </a>
 
-<a class="MAIL link_general" style="display:inline-block; padding:0;" rel="nofollow"
+<a class="MAIL link_general" rel="nofollow"
     href="mailto:?subject=Me%20gusta%20esta%20web%20&body=https://avatarete.github.io/avataretes/" title="Send by mail">
     <!--<i class="visuallyhidden">share via email</i>-->
-</a>
-</input>
-</h4>
-
+</a>  
 </div>
-</header>
+   
+</div>
+
 
   <div class="container">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/01/guillaume-bolduc-209298.jpg" alt="Photo by Guillaume Bolduc on Unsplash" title="Photo by Guillaume Bolduc on Unsplash">
@@ -169,7 +213,9 @@ Share on:
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
     return false"  title="Photo by Guillaume Bolduc on Unsplash">(Photo by Guillaume Bolduc on Unsplash)</a></p>
-    <a class="info" tittle="Share" href="#infomodelo01">Share</a>
+<a class="info" href="#infomodelo01">Share</a>
+<!--<a class="info" style="text-indent: -5rem;" href="#infomodelo01">Compartir</a>
+<a class="info" style="text-indent: -4.25rem;" href="#infomodelo01">Partager</a>-->
   </div>
   <div class="container">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/02/janko-ferlic-303881.jpg" alt="Photo by Janko Ferlic on Unsplash" title="Photo by Janko Ferlic on Unsplash">
@@ -183,7 +229,9 @@ Share on:
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
     return false"  title="Photo by Janko Ferlic on Unsplash">(Photo by Janko Ferlic on Unsplash)</a></p>
-    <a class="info" tittle="Share" href="#infomodelo02">Share</a>
+<a class="LUKINFO info" href="#infomodelo02">Share</a>
+<!--<a class="LESINFO info" style="text-indent: -5rem;" href="#infomodelo02">Compartir</a>
+<a class="LFRINFO info" style="text-indent: -4.25rem;" href="#infomodelo02">Partager</a>-->
   </div>
   <div class="container">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/03/bin-thi-u-426260.jpg" alt="Photo by Bin Thiều on Unsplash" title="Photo by Bin Thiều on Unsplash">
@@ -196,7 +244,7 @@ Share on:
         'popupwindow',
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
-    return false"  title="Photo by Bin Thiều on Unsplash">(Photo by Bin Thiều on Unsplash)</a></p><a class="info" tittle="Share" href="#infomodelo03">Share</a></div>
+    return false"  title="Photo by Bin Thiều on Unsplash">(Photo by Bin Thiều on Unsplash)</a></p><a id="LFR" class="info" href="#infomodelo03">Share</a></div>
             
 
     <div class="container">
@@ -211,7 +259,7 @@ Share on:
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
     return false"  title="Photo by Ari Sherbill on Unsplash">(Photo by Ari Sherbill on Unsplash)</a></p>
-    <a class="info" tittle="Share" href="#infomodelo05">Share</a>
+    <a id="LFR" class="info" href="#infomodelo05">Share</a>
   </div>
   <div class="container">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/06/frank-mckenna-135726.jpg" alt="Photo by Frank Mckenna on Unsplash" title="Photo by Frank Mckenna on Unsplash">
@@ -225,7 +273,7 @@ Share on:
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
     return false"  title="Photo by Frank Mckenna on Unsplash">(Photo by Frank Mckenna on Unsplash)</a></p>
-        <a class="info" tittle="Share" href="#infomodelo06">Share</a>
+        <a id="LFR" class="info" href="#infomodelo06">Share</a>
         </div>
 
             <div class="container">
@@ -240,7 +288,7 @@ Share on:
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
     return false"  title="Photo by Chelsea Ferenando on Unsplash">(Photo by Chelsea Ferenando on Unsplash)</a></p>
-        <a class="info" tittle="Share" href="#infomodelo08">Share</a>
+        <a id="LFR" class="info" href="#infomodelo08">Share</a>
   </div>
     <div class="container">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/09/alexander-dummer-150646.jpg" alt="Photo by Alexander Dummer on Unsplash" title="Photo by Alexander Dummer on Unsplash">
@@ -254,7 +302,7 @@ Share on:
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
     return false"  title="Photo by Alexander Dummer on Unsplash">(Photo by Alexander Dummer on Unsplash)</a></p>
-    <a class="info" tittle="Share" href="#infomodelo09">Share</a>
+    <a id="LFR" class="info" href="#infomodelo09">Share</a>
   </div>
 
 <div class="container">
@@ -269,7 +317,7 @@ Share on:
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
     return false"  title="Photo by Mirko Nicholson on Unsplash">(Photo by Mirko Nicholson on Unsplash)</a></p>
-    <a class="info" tittle="Share" href="#infomodelo10">Share</a>
+    <a id="LFR" class="info" href="#infomodelo10">Share</a>
         </div>
 
 <div class="container">
@@ -285,7 +333,7 @@ Share on:
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
     return false"  title="Photo by Alexis Chloe on Unsplash">(Photo by Alexis Chloe on Unsplash)</a></p>
-            <a class="info" tittle="Share" href="#infomodelo11">Share</a>
+            <a id="LFR" class="info" href="#infomodelo11">Share</a>
             </div>
 <div class="container">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/13/jp-kxkl-430130.jpg" alt="Photo by Jared Sluyter on Unsplash" title="Photo by Jared Sluyter on Unsplash">
@@ -299,14 +347,14 @@ Share on:
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
     return false"  title="Photo by jp kxkl on Unsplash">(Photo by jp kxkl on Unsplash)</a></p>
-<a class="info" tittle="Share" href="#infomodelo12">Share</a>
+<a id="LFR" class="info" href="#infomodelo12">Share</a>
 </div>
 
 <div id="ZOCALO"></div>
 </div>
 <footer class="BOTONERA">
 <div><!-- www.123formbuilder.com script begins here-->
-<script type="text/javascript" defer src="//www.123formbuilder.com/embed/3310200.js?type=lightbox" data-role="form" data-default-width="650px" data-embed-type="lightbox-text-link" data-embed-text-link="Contact us"></script>
+<script defer src="//www.123formbuilder.com/embed/3310200.js?type=lightbox" data-role="form" data-default-width="650px" data-embed-type="lightbox-text-link" data-embed-text-link="Contact us"></script>
 <!-- www.123formbuilder.com script ends here -->
 </div><div>
 <!--FOLLOW FOOTER-->
@@ -318,7 +366,9 @@ Share on:
 <!--Modelo01-->
 <div id="infomodelo01" class="popup"><a onClick="history.go(-1);return true;"><img src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO01.jpg" alt="Modelo01" title="Earrings Model 01"></a>
 <div class="SOCIAL"><a class="BACK" onClick="history.go(-1);return true;" title="Go back"></a>
-<a class="FCBK" rel="img_src" href=""
+<a class="FCBK" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" href=""
     onclick="popUp=window.open(
         'https://www.facebook.com/sharer.php?u=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO01.jpg',
         'popupwindow',
@@ -327,7 +377,9 @@ Share on:
     return false"  title="Share on Facebook">
     <!--<i class="visuallyhidden">share on facebook</i>-->
 </a>
-<a class="TWITTER" rel="nofollow"
+<a class="TWITTER" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" rel="nofollow"
     href="https://twitter.com/"
     onclick="popUp=window.open(
         'https://twitter.com/Avataretes/status/949885799448838144',
@@ -337,7 +389,9 @@ Share on:
     return false" title="Share on Twitter">
    <!-- <i class="visuallyhidden">share on twitter</i>-->
 </a>
-<a class="GPLUS" rel="nofollow"
+<a class="GPLUS" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="https://www.plus.google.com/"
     onclick="popUp=window.open(
         'https://plus.google.com/share?url=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO01.jpg',
@@ -356,7 +410,9 @@ Share on:
     popUp.focus();
     return false" ></a>
 
-<a class="MAIL" rel="nofollow"
+<a class="MAIL" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="mailto:?subject=I%20like%20this%20earring%20&body=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO01.jpg" title="Send by mail">
     <!--<i class="visuallyhidden">share via email</i>-->
 </a>
@@ -364,7 +420,9 @@ Share on:
 <!--Modelo02-->
 <div id="infomodelo02" class="popup"><a onClick="history.go(-1);return true;"><img src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO02.jpg" alt="Modelo02" title="Earrings Model 02"></a>
 <div class="SOCIAL"><a class="BACK" onClick="history.go(-1);return true;" title="Go back"></a>
-<a class="FCBK" rel="img_src" href=""
+<a class="FCBK" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" href=""
     onclick="popUp=window.open(
         'https://www.facebook.com/sharer.php?u=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO02.jpg',
         'popupwindow',
@@ -373,7 +431,9 @@ Share on:
     return false"  title="Share on Facebook">
     <!--<i class="visuallyhidden">share on facebook</i>-->
 </a>
-<a class="TWITTER" rel="nofollow"
+<a class="TWITTER" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" rel="nofollow"
     href="https://twitter.com/"
     onclick="popUp=window.open(
         'https://twitter.com/Avataretes/status/949885884056457216',
@@ -383,7 +443,9 @@ Share on:
     return false" title="Share on Twitter">
    <!-- <i class="visuallyhidden">share on twitter</i>-->
 </a>
-<a class="GPLUS" rel="nofollow"
+<a class="GPLUS" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="https://www.plus.google.com/"
     onclick="popUp=window.open(
         'https://plus.google.com/share?url=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO02.jpg',
@@ -400,7 +462,9 @@ Share on:
     popUp.focus();
     return false"></a>
 
-<a class="MAIL" rel="nofollow"
+<a class="MAIL" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="mailto:?subject=I%20like%20this%20earring%20&body=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO02.jpg" title="Send by mail">
     <!--<i class="visuallyhidden">share via email</i>-->
 </a>
@@ -408,7 +472,9 @@ Share on:
 <!--Modelo03-->
 <div id="infomodelo03" class="popup"><a onClick="history.go(-1);return true;"><img src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO03.jpg" alt="Modelo03" title="Earrings Model 03"></a>
 <div class="SOCIAL"><a class="BACK" onClick="history.go(-1);return true;" title="Go back"></a>
-<a class="FCBK" rel="img_src" href=""
+<a class="FCBK" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" href=""
     onclick="popUp=window.open(
         'https://www.facebook.com/sharer.php?u=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO03.jpg',
         'popupwindow',
@@ -417,7 +483,9 @@ Share on:
     return false"  title="Share on Facebook">
     <!--<i class="visuallyhidden">share on facebook</i>-->
 </a>
-<a class="TWITTER" rel="nofollow"
+<a class="TWITTER" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" rel="nofollow"
     href="https://twitter.com/"
     onclick="popUp=window.open(
         'https://twitter.com/Avataretes/status/949889873305104385',
@@ -427,7 +495,9 @@ Share on:
     return false" title="Share on Twitter">
    <!-- <i class="visuallyhidden">share on twitter</i>-->
 </a>
-<a class="GPLUS" rel="nofollow"
+<a class="GPLUS" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="https://www.plus.google.com/"
     onclick="popUp=window.open(
         'https://plus.google.com/share?url=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO03.jpg',
@@ -441,61 +511,22 @@ Share on:
         'popupwindow',
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
-    return false" </a>
-<a class="MAIL" rel="nofollow"
+    return false"></a>
+<a class="MAIL" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="mailto:?subject=I%20like%20this%20earring%20&body=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO03.jpg" title="Send by mail">
     <!--<i class="visuallyhidden">share via email</i>-->
 </a>
 </div>
 </div>
-<!--Modelo04-->
-<div id="infomodelo04" class="popup"><a onClick="history.go(-1);return true;"><img src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO04.jpg" alt="Modelo04" title="Earrings Model 04"></a>
-<div class="SOCIAL"><a class="BACK" onClick="history.go(-1);return true;" title="Go back"></a>
-<a class="FCBK" rel="img_src" href=""
-    onclick="popUp=window.open(
-        'https://www.facebook.com/sharer.php?u=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO04.jpg',
-        'popupwindow',
-        'scrollbars=yes,width=800,height=400');
-    popUp.focus();
-    return false"  title="Share on Facebook">
-    <!--<i class="visuallyhidden">share on facebook</i>-->
-</a>
-<!--<a class="TWITTER" rel="nofollow"
-    href="https://twitter.com/"
-    onclick="popUp=window.open(
-        'https://twitter.com/twitter/statuses/924708332916690945',
-        'popupwindow',
-        'scrollbars=yes,width=800,height=400');
-    popUp.focus();
-    return false" title="Share on Twitter">
-   <!-- <i class="visuallyhidden">share on twitter</i>
-</a>-->
-<a class="GPLUS" rel="nofollow"
-    href="https://www.plus.google.com/"
-    onclick="popUp=window.open(
-        'https://plus.google.com/share?url=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO04.jpg',
-        'popupwindow',
-        'scrollbars=yes,width=800,height=400');
-    popUp.focus();
-    return false" title="Share on Google+">
-    <!--<i class="visuallyhidden">share on google plus</i>-->
-</a>
-<a class="PINTEREST" data-pin-do="buttonPin" data-pin-count="beside" data-pin-lang="es" href="https://es.pinterest.com" onclick="popUp=window.open(
-        'https://es.pinterest.com/pin/create/button/?url=https%3A%2F%2Favatarete.github.io%2Favataretes%2F&media=https%3A%2F%2Frawgit.com%2Favatarete%2Favataretes%2Fgh-pages%2FFOTOS%2FGENERAL%2FMODELO04.jpg&description=Earring%20Model%2004',
-        'popupwindow',
-        'scrollbars=yes,width=800,height=400');
-    popUp.focus();
-    return false" ></a>
-<a class="MAIL" rel="nofollow"
-    href="mailto:?subject=I%20like%20this%20earring%20&body=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO04.jpg" title="Send by mail">
-    <!--<i class="visuallyhidden">share via email</i>-->
-</a>
-</div>
-</div>
+
 <!--Modelo05-->
 <div id="infomodelo05" class="popup"><a onClick="history.go(-1);return true;"><img src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO05.jpg" alt="Modelo05" title="Earrings Model 05"></a>
 <div class="SOCIAL"><a class="BACK" onClick="history.go(-1);return true;" title="Go back"></a>
-<a class="FCBK" rel="img_src" href=""
+<a class="FCBK" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" href=""
     onclick="popUp=window.open(
         'https://www.facebook.com/sharer.php?u=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO05.jpg',
         'popupwindow',
@@ -504,7 +535,9 @@ Share on:
     return false"  title="Share on Facebook">
     <!--<i class="visuallyhidden">share on facebook</i>-->
 </a>
-<a class="TWITTER" rel="nofollow"
+<a class="TWITTER" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" rel="nofollow"
     href="https://twitter.com/"
     onclick="popUp=window.open(
         'https://twitter.com/Avataretes/status/949886032236990470',
@@ -514,7 +547,9 @@ Share on:
     return false" title="Share on Twitter">
    <!-- <i class="visuallyhidden">share on twitter</i>-->
 </a>
-<a class="GPLUS" rel="nofollow"
+<a class="GPLUS" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="https://www.plus.google.com/"
     onclick="popUp=window.open(
         'https://plus.google.com/share?url=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO05.jpg',
@@ -530,7 +565,9 @@ Share on:
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
     return false" ></a>
-<a class="MAIL" rel="nofollow"
+<a class="MAIL" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="mailto:?subject=I%20like%20this%20earring%20&body=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO05.jpg" title="Send by mail">
     <!--<i class="visuallyhidden">share via email</i>-->
 </a>
@@ -539,7 +576,9 @@ Share on:
 <!--Modelo06-->
 <div id="infomodelo06" class="popup"><a onClick="history.go(-1);return true;"><img src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO06.jpg" alt="Modelo06" title="Earrings Model 06"></a>
 <div class="SOCIAL"><a class="BACK" onClick="history.go(-1);return true;" title="Go back"></a>
-<a class="FCBK" rel="img_src" href=""
+<a class="FCBK" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" href=""
     onclick="popUp=window.open(
         'https://www.facebook.com/sharer.php?u=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO06.jpg',
         'popupwindow',
@@ -548,7 +587,9 @@ Share on:
     return false"  title="Share on Facebook">
     <!--<i class="visuallyhidden">share on facebook</i>-->
 </a>
-<a class="TWITTER" rel="nofollow"
+<a class="TWITTER" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" rel="nofollow"
     href="https://twitter.com/"
     onclick="popUp=window.open(
         'https://twitter.com/Avataretes/status/949886110389465089',
@@ -558,7 +599,9 @@ Share on:
     return false" title="Share on Twitter">
    <!-- <i class="visuallyhidden">share on twitter</i>-->
 </a>
-<a class="GPLUS" rel="nofollow"
+<a class="GPLUS" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="https://www.plus.google.com/"
     onclick="popUp=window.open(
         'https://plus.google.com/share?url=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO06.jpg',
@@ -574,61 +617,22 @@ Share on:
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
     return false" ></a>
-<a class="MAIL" rel="nofollow"
+<a class="MAIL" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="mailto:?subject=I%20like%20this%20earring%20&body=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO06.jpg" title="Send by mail">
     <!--<i class="visuallyhidden">share via email</i>-->
 </a>
 </div>
 </div>
-<!--Modelo07-->
-<div id="infomodelo07" class="popup"><a onClick="history.go(-1);return true;"><img src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO07.jpg" alt="Modelo07" title="Earrings Model 07"></a>
-<div class="SOCIAL"><a class="BACK" onClick="history.go(-1);return true;" title="Go back"></a>
-<a class="FCBK" rel="img_src" href=""
-    onclick="popUp=window.open(
-        'https://www.facebook.com/sharer.php?u=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO07.jpg',
-        'popupwindow',
-        'scrollbars=yes,width=800,height=400');
-    popUp.focus();
-    return false"  title="Share on Facebook">
-    <!--<i class="visuallyhidden">share on facebook</i>-->
-</a>
-<!--<a class="TWITTER" rel="nofollow"
-    href="https://twitter.com/"
-    onclick="popUp=window.open(
-        'https://twitter.com/twitter/statuses/924708332916690945',
-        'popupwindow',
-        'scrollbars=yes,width=800,height=400');
-    popUp.focus();
-    return false" title="Share on Twitter">
-   <!-- <i class="visuallyhidden">share on twitter</i>
-</a>-->
-<a class="GPLUS" rel="nofollow"
-    href="https://www.plus.google.com/"
-    onclick="popUp=window.open(
-        'https://plus.google.com/share?url=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO07.jpg',
-        'popupwindow',
-        'scrollbars=yes,width=800,height=400');
-    popUp.focus();
-    return false" title="Share on Google+">
-    <!--<i class="visuallyhidden">share on google plus</i>-->
-</a>
-<a class="PINTEREST" data-pin-do="buttonPin" data-pin-count="beside" data-pin-lang="es" href="https://es.pinterest.com" onclick="popUp=window.open(
-        'https://es.pinterest.com/pin/create/button/?url=https%3A%2F%2Favatarete.github.io%2Favataretes%2F&media=https%3A%2F%2Frawgit.com%2Favatarete%2Favataretes%2Fgh-pages%2FFOTOS%2FGENERAL%2FMODELO07.jpg&description=Earring%20Model%2007',
-        'popupwindow',
-        'scrollbars=yes,width=800,height=400');
-    popUp.focus();
-    return false" ></a>
-<a class="MAIL" rel="nofollow"
-    href="mailto:?subject=I%20like%20this%20earring%20&body=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO07.jpg" title="Send by mail">
-    <!--<i class="visuallyhidden">share via email</i>-->
-</a>
-</div>
-</div>
+
 <!--Modelo08-->
 <div id="infomodelo08" class="popup"><a onClick="history.go(-1);return true;"><img src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO08.jpg" alt="Modelo08" title="Earrings Model 08"></a>
 <div class="SOCIAL">
 <a class="BACK" onClick="history.go(-1);return true;" title="Go back"></a>
-<a class="FCBK" rel="img_src" href=""
+<a class="FCBK" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" href=""
     onclick="popUp=window.open(
         'https://www.facebook.com/sharer.php?u=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO08.jpg',
         'popupwindow',
@@ -637,7 +641,9 @@ Share on:
     return false"  title="Share on Facebook">
     <!--<i class="visuallyhidden">share on facebook</i>-->
 </a>
-<a class="TWITTER" rel="nofollow"
+<a class="TWITTER" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" rel="nofollow"
     href="https://twitter.com/"
     onclick="popUp=window.open(
         'https://twitter.com/Avataretes/status/949886186444742657',
@@ -647,7 +653,9 @@ Share on:
     return false" title="Share on Twitter">
    <!-- <i class="visuallyhidden">share on twitter</i>-->
 </a>
-<a class="GPLUS" rel="nofollow"
+<a class="GPLUS" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="https://www.plus.google.com/"
     onclick="popUp=window.open(
         'https://plus.google.com/share?url=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO08.jpg',
@@ -663,7 +671,9 @@ Share on:
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
     return false" ></a>
-<a class="MAIL" rel="nofollow"
+<a class="MAIL" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="mailto:?subject=I%20like%20this%20earring%20&body=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO08.jpg" title="Send by mail">
     <!--<i class="visuallyhidden">share via email</i>-->
 </a>
@@ -672,7 +682,9 @@ Share on:
 <!--Modelo09-->
 <div id="infomodelo09" class="popup"><a onClick="history.go(-1);return true;"><img src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO09.jpg" alt="Modelo09" title="Earrings Model 09"></a>
 <div class="SOCIAL"><a class="BACK" onClick="history.go(-1);return true;" title="Go back"></a>
-<a class="FCBK" rel="img_src" href=""
+<a class="FCBK" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" href=""
     onclick="popUp=window.open(
         'https://www.facebook.com/sharer.php?u=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO09.jpg',
         'popupwindow',
@@ -681,17 +693,21 @@ Share on:
     return false"  title="Share on Facebook">
     <!--<i class="visuallyhidden">share on facebook</i>-->
 </a>
-<!--<a class="TWITTER" rel="nofollow"
+<a class="TWITTER" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" rel="nofollow"
     href="https://twitter.com/"
     onclick="popUp=window.open(
-        'https://twitter.com/twitter/statuses/924708332916690945',
+        'https://twitter.com/Avataretes/status/950624714371878912',
         'popupwindow',
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
     return false" title="Share on Twitter">
-   <!-- <i class="visuallyhidden">share on twitter</i>
-</a>-->
-<a class="GPLUS" rel="nofollow"
+   <!-- <i class="visuallyhidden">share on twitter</i>-->
+</a>
+<a class="GPLUS" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="https://www.plus.google.com/"
     onclick="popUp=window.open(
         'https://plus.google.com/share?url=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO09.jpg',
@@ -707,7 +723,9 @@ Share on:
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
     return false" ></a>
-<a class="MAIL" rel="nofollow"
+<a class="MAIL" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="mailto:?subject=I%20like%20this%20earring%20&body=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO09.jpg" title="Send by mail">
     <!--<i class="visuallyhidden">share via email</i>-->
 </a>
@@ -716,7 +734,9 @@ Share on:
 <!--Modelo10-->
 <div id="infomodelo10" class="popup"><a onClick="history.go(-1);return true;"><img src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO10.jpg" alt="Modelo10" title="Earrings Model 10"></a>
 <div class="SOCIAL"><a class="BACK" onClick="history.go(-1);return true;" title="Go back"></a>
-<a class="FCBK" rel="img_src" href=""
+<a class="FCBK" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" href=""
     onclick="popUp=window.open(
         'https://www.facebook.com/sharer.php?u=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO10.jpg',
         'popupwindow',
@@ -725,7 +745,9 @@ Share on:
     return false"  title="Share on Facebook">
     <!--<i class="visuallyhidden">share on facebook</i>-->
 </a>
-<a class="TWITTER" rel="nofollow"
+<a class="TWITTER" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" rel="nofollow"
     href="https://twitter.com/"
     onclick="popUp=window.open(
         'https://twitter.com/Avataretes/status/949885316642557952',
@@ -735,7 +757,9 @@ Share on:
     return false" title="Share on Twitter">
    <!-- <i class="visuallyhidden">share on twitter</i>-->
 </a>
-<a class="GPLUS" rel="nofollow"
+<a class="GPLUS" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="https://www.plus.google.com/"
     onclick="popUp=window.open(
         'https://plus.google.com/share?url=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO10.jpg',
@@ -751,7 +775,9 @@ Share on:
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
     return false" ></a>
-<a class="MAIL" rel="nofollow"
+<a class="MAIL" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="mailto:?subject=I%20like%20this%20earring%20&body=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO10.jpg" title="Send by mail">
     <!--<i class="visuallyhidden">share via email</i>-->
 </a>
@@ -760,7 +786,9 @@ Share on:
 <!--Modelo11-->
 <div id="infomodelo11" class="popup"><a onClick="history.go(-1);return true;"><img src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO11.jpg" alt="Modelo11" title="Earrings Model 11"></a>
 <div class="SOCIAL"><a class="BACK" onClick="history.go(-1);return true;" title="Go back"></a>
-<a class="FCBK" rel="img_src" href=""
+<a class="FCBK" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" href=""
     onclick="popUp=window.open(
         'https://www.facebook.com/sharer.php?u=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO11.jpg',
         'popupwindow',
@@ -769,7 +797,9 @@ Share on:
     return false"  title="Share on Facebook">
     <!--<i class="visuallyhidden">share on facebook</i>-->
 </a>
-<a class="TWITTER" rel="nofollow"
+<a class="TWITTER" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" rel="nofollow"
     href="https://twitter.com/"
     onclick="popUp=window.open(
         'https://twitter.com/Avataretes/status/949886270574120961',
@@ -779,7 +809,9 @@ Share on:
     return false" title="Share on Twitter">
    <!-- <i class="visuallyhidden">share on twitter</i>-->
 </a>
-<a class="GPLUS" rel="nofollow"
+<a class="GPLUS" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="https://www.plus.google.com/"
     onclick="popUp=window.open(
         'https://plus.google.com/share?url=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO11.jpg',
@@ -795,7 +827,9 @@ Share on:
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
     return false" ></a>
-<a class="MAIL" rel="nofollow"
+<a class="MAIL" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="mailto:?subject=I%20like%20this%20earring%20&body=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO11.jpg" title="Send by mail">
     <!--<i class="visuallyhidden">share via email</i>-->
 </a>
@@ -804,7 +838,9 @@ Share on:
 <!--Modelo12-->
 <div id="infomodelo12" class="popup"><a onClick="history.go(-1);return true;"><img src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO13.jpg" alt="Modelo12" title="Earrings Model 12"></a>
 <div class="SOCIAL"><a class="BACK" onClick="history.go(-1);return true;" title="Go back"></a>
-<a class="FCBK" rel="img_src" href=""
+<a class="FCBK" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" href=""
     onclick="popUp=window.open(
         'https://www.facebook.com/sharer.php?u=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO13.jpg',
         'popupwindow',
@@ -813,7 +849,9 @@ Share on:
     return false"  title="Share on Facebook">
     <!--<i class="visuallyhidden">share on facebook</i>-->
 </a>
-<a class="TWITTER" rel="nofollow"
+<a class="TWITTER" style="visibility:visible;-moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;" rel="nofollow"
     href="https://twitter.com/"
     onclick="popUp=window.open(
         'https://twitter.com/Avataretes/status/952539780704817154',
@@ -823,7 +861,9 @@ Share on:
     return false" title="Share on Twitter">
    <!-- <i class="visuallyhidden">share on twitter</i>-->
 </a>
-<a class="GPLUS" rel="nofollow"
+<a class="GPLUS" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="https://www.plus.google.com/"
     onclick="popUp=window.open(
         'https://plus.google.com/share?url=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO13.jpg',
@@ -838,7 +878,9 @@ Share on:
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
     return false"></a>
-<a class="MAIL" rel="nofollow"
+<a class="MAIL" style="visibility:visible; -moz-opacity:.99; 
+filter:alpha(opacity=99); 
+opacity:.99;"  rel="nofollow"
     href="mailto:?subject=I%20like%20this%20earring%20&body=https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/GENERAL/MODELO13.jpg" title="Send by mail">
     <!--<i class="visuallyhidden">share via email</i>-->
 </a>
