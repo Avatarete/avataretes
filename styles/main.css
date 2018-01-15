@@ -160,7 +160,7 @@ text-align:center;
 padding: 0.5rem 2rem 0;
 text-align:center;
 color: #747691;
-/*letter-spacing: 0.03rem;*/
+letter-spacing: 0.15rem;
 line-height: 0rem;
 font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-weight:200;
@@ -452,6 +452,8 @@ margin: 1.5rem 1rem 1rem 0;
 .BOTONERA {width:100%;}
 .DESCRIPTION {margin: 0 2rem;}
 .TOP {position:relative; right:0}
+.DESTACADO {
+    padding: 0.5rem 0rem 0; }
 }
 
 @media only screen and (min-width:100px) and (max-width: 320px) {
@@ -462,7 +464,6 @@ min-height: 15rem;
 }
 .TOP {position:relative; right:0}
 .DESTACADO {
-    padding: 0.5rem 0rem 0;}
-.lightbox-text-link {
-    padding: 0 1rem;}
+    padding: 0.5rem 0rem 0; letter-spacing: normal;}
+.lightbox-text-link {padding: 0 1rem;}
 }
