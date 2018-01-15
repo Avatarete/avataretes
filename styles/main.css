@@ -463,5 +463,6 @@ min-height: 15rem;
 .TOP {position:relative; right:0}
 .DESTACADO {
     padding: 0.5rem 0rem 0;}
-
+.lightbox-text-link {
+    padding: 0 2rem;}
 }
