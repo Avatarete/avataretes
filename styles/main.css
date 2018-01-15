@@ -461,5 +461,7 @@ min-width: 15rem;
 min-height: 15rem;
 }
 .TOP {position:relative; right:0}
+.DESTACADO {
+    padding: 0.5rem 0rem 0;}
 
 }
