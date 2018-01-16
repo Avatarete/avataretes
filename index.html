@@ -64,7 +64,7 @@ $('img').bind('contextmenu', function(e) {
 $(document).ready(function() {
 
 var display = function(block_name) {
-  $('.CENTER, .info, .etiqueta, .BUTTON').css('display', 'none');
+  $('.CENTER, .info, .etiqueta, .BUTTON, .contacto').css('display', 'none');
   $('#' + block_name).css('display', 'block');
   $('.' + block_name).css('display', 'block');
 }
@@ -133,7 +133,7 @@ $('.FR').on('click', function() {
 <div class="BOTONERA TOP">
 <div class="column column-one">
 <input type="checkbox" id="menu_buy_id" class="menu_buy">
-<label for="menu_buy_id" class="" onclick="if(document.getElementById('menu_buy_id').value) document.getElementById('menu_share_id').checked = false; if(document.getElementById('menu_buy_id').value) document.getElementById('menu_lang_id').checked = false;"><h4 style="line-height: 0"><nav class="BUTTON LUK">Buy on:</nav><nav class="BUTTON LES">Comprar es:</nav><nav class="BUTTON LFR">Acheter:</nav></h4></label>
+<label for="menu_buy_id" class="" onclick="if(document.getElementById('menu_buy_id').value) document.getElementById('menu_share_id').checked = false; if(document.getElementById('menu_buy_id').value) document.getElementById('menu_lang_id').checked = false;"><h4 style="line-height: 0"><nav class="BUTTON LUK">Buy on:</nav><nav class="BUTTON LES">Comprar en:</nav><nav class="BUTTON LFR">Acheter:</nav></h4></label>
 <a class="ETSY link_general" onclick="popUp=window.open(
         'https://www.etsy.com/es/shop/Avatarete',
         'popupwindow',
@@ -501,10 +501,16 @@ $('.FR').on('click', function() {
 <div id="ZOCALO"></div>
 </div>
 <footer class="BOTONERA">
-<div><!-- www.123formbuilder.com script begins here-->
-<script defer src="//www.123formbuilder.com/embed/3310200.js?type=lightbox" data-role="form" data-default-width="650px" data-embed-type="lightbox-text-link" data-embed-text-link="Contact us"></script>
+<div class="contacto LES"><!-- www.123formbuilder.com script begins here-->
+<script defer src="//www.123formbuilder.com/embed/3310200.js?type=lightbox" data-role="form" data-default-width="650px" data-embed-type="lightbox-text-link" data-embed-text-link="Contáctenos"></script>
 <!-- www.123formbuilder.com script ends here -->
-</div><div>
+</div>
+<div class="contacto LFR"><!-- www.123formbuilder.com script begins here-->
+<script defer src="//www.123formbuilder.com/embed/3310200.js?type=lightbox" data-role="form" data-default-width="650px" data-embed-type="lightbox-text-link" data-embed-text-link="Contactez-nous"></script>
+<!-- www.123formbuilder.com script ends here -->
+<div class="contacto LUK"><!-- www.123formbuilder.com script begins here-->
+<script defer src="//www.123formbuilder.com/embed/3310200.js?type=lightbox" data-role="form" data-default-width="650px" data-embed-type="lightbox-text-link" data-embed-text-link="Contact us"></script>
+<!-- www.123formbuilder.com script ends here --><div>
 <!--FOLLOW FOOTER-->
 <a href="https://twitter.com/Avataretes?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @Avataretes</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <!--END FOLLOW-->
