@@ -84,14 +84,61 @@ $('.FR').on('click', function() {
 
 </script>
 
+<script>
+$(document).ready(function() {
+
+var display = function(block_name, title) {
+  $('.info, .etiqueta, .contacto').css('display', 'none');
+  $('.' + block_name + '').css('display', 'block');
+}
+
+$('.UK').on('click', function() {
+  display('LUK', $(this));
+});
+
+$('.ES').on('click', function() {
+  display('LES', $(this));
+});
+
+$('.FR').on('click', function() {
+  display('LFR', $(this));
+});
+});
+
+</script>
 
 
+<!--<script>
+$(document).ready(function() {
+
+var display = function(block_name, title) {
+  $('.etiqueta').css('display', 'none');
+  $('.' + block_name + '').css('display', 'block');
+}
+
+$('.UK').on('click', function() {
+  display('LUK', $(this));
+});
+
+$('.ES').on('click', function() {
+  display('LES', $(this));
+});
+
+$('.FR').on('click', function() {
+  display('LFR', $(this));
+});
+});
+
+</script>-->
 
 <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="styles/main.css"/>
 
 
-<style>#LUK {display:block;}</style>
+<style>#LUK {display:block;}
+.LES, .LFR {display:none;}
+.LUK {display:block;}
+</style>
 </head>
 
 
@@ -202,159 +249,317 @@ $('.FR').on('click', function() {
 
 
   <div class="container">
-    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/01/guillaume-bolduc-209298.jpg" alt="Photo by Guillaume Bolduc on Unsplash" title="Photo by Guillaume Bolduc on Unsplash">
+    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/01/guillaume-bolduc-209298.jpg" alt="Photo by Guillaume Bolduc – Unsplash" title="Photo by Guillaume Bolduc – Unsplash">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/01/PENDIENTE01_DRAW.jpg" alt="Scketch01" title="Scketch01" >
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/01/PENDIENTE01.jpg" alt="Earrings01" title="Earrings01">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/01/PENDIENTE01_MODEL2.jpg" alt="Model01" title="Model01">
-    <p class="etiqueta">Sample<span style="color:#2E27A8"> – Me </span><br><a href=""
+<p class="etiqueta LUK">Sample<span style="color:#2E27A8"> – Me </span><br><a href=""
     onclick="popUp=window.open(
         'https://unsplash.com/photos/GoWGCHdZgHU',
         'popupwindow',
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
-    return false"  title="Photo by Guillaume Bolduc on Unsplash">(Photo by Guillaume Bolduc on Unsplash)</a></p>
-<a class="info" href="#infomodelo01">Share</a>
-<!--<a class="info" style="text-indent: -5rem;" href="#infomodelo01">Compartir</a>
-<a class="info" style="text-indent: -4.25rem;" href="#infomodelo01">Partager</a>-->
+    return false"  title="Photo by Guillaume Bolduc – Unsplash">(Photo by Guillaume Bolduc – Unsplash)</a></p>
+<p class="etiqueta LES">Ejemplo<span style="color:#2E27A8"> – Yo </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/GoWGCHdZgHU',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by Guillaume Bolduc – Unsplash">(Foto de Guillaume Bolduc – Unsplash)</a></p>
+<p class="etiqueta LFR">Exemple<span style="color:#2E27A8"> – Moi </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/GoWGCHdZgHU',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by Guillaume Bolduc – Unsplash">(Photo de Guillaume Bolduc – Unsplash)</a></p>
+<a class="info LUK" href="#infomodelo01">Share</a>
+<a class="info LES" style="text-indent: -5rem;" href="#infomodelo01">Compartir</a>
+<a class="info LFR" style="text-indent: -4.25rem;" href="#infomodelo01">Partager</a>
   </div>
   <div class="container">
-    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/02/janko-ferlic-303881.jpg" alt="Photo by Janko Ferlic on Unsplash" title="Photo by Janko Ferlic on Unsplash">
+    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/02/janko-ferlic-303881.jpg" alt="Photo by Janko Ferlic – Unsplash" title="Photo by Janko Ferlic – Unsplash">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/02/PENDIENTE02_DRAW.jpg" alt="Scketch02" title="Scketch02">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/02/PENDIENTE02.jpg" alt="Earrings02" title="Earrings02">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/02/PENDIENTE02_MODEL2.jpg" alt="Model02" title="Model02">
-        <p class="etiqueta">Sample<span style="color:#2E27A8"> – My cousin </span><br><a href=""
+<p class="etiqueta LUK">Sample<span style="color:#2E27A8"> – My cousin </span><br><a href=""
     onclick="popUp=window.open(
         'https://unsplash.com/photos/oC1RmrCuDA4',
         'popupwindow',
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
-    return false"  title="Photo by Janko Ferlic on Unsplash">(Photo by Janko Ferlic on Unsplash)</a></p>
-<a class="LUKINFO info" href="#infomodelo02">Share</a>
-<!--<a class="LESINFO info" style="text-indent: -5rem;" href="#infomodelo02">Compartir</a>
-<a class="LFRINFO info" style="text-indent: -4.25rem;" href="#infomodelo02">Partager</a>-->
+    return false"  title="Photo by Janko Ferlic – Unsplash">(Photo by Janko Ferlic – Unsplash)</a></p>
+<p class="etiqueta LES">Ejemplo<span style="color:#2E27A8"> – Mi prima </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/oC1RmrCuDA4',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by Janko Ferlic – Unsplash">(Foto de Janko Ferlic – Unsplash)</a></p>
+<p class="etiqueta LFR">Exemple<span style="color:#2E27A8"> – Ma cousine </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/oC1RmrCuDA4',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by Janko Ferlic – Unsplash">(Photo de Janko Ferlic – Unsplash)</a></p>
+<a class="info LUK" href="#infomodelo02">Share</a>
+<a class="info LES" style="text-indent: -5rem;" href="#infomodelo02">Compartir</a>
+<a class="info LFR" style="text-indent: -4.25rem;" href="#infomodelo02">Partager</a>
   </div>
   <div class="container">
-    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/03/bin-thi-u-426260.jpg" alt="Photo by Bin Thiều on Unsplash" title="Photo by Bin Thiều on Unsplash">
+    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/03/bin-thi-u-426260.jpg" alt="Photo by Bin Thiều – Unsplash" title="Photo by Bin Thiều – Unsplash">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/03/PENDIENTE03_DRAW.jpg" alt="Scketch03" title="Scketch03">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/03/PENDIENTE03.jpg" alt="Earrings03" title="Earrings03">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/03/PENDIENTE03_MODEL2.jpg" alt="Model03" title="Model03">
-            <p class="etiqueta">Sample<span style="color:#2E27A8"> – My sister </span><br><a href=""
+<p class="etiqueta LUK">Sample<span style="color:#2E27A8"> – My sister </span><br><a href=""
     onclick="popUp=window.open(
         'https://unsplash.com/photos/XtgrHH8mQmk',
         'popupwindow',
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
-    return false"  title="Photo by Bin Thiều on Unsplash">(Photo by Bin Thiều on Unsplash)</a></p><a id="LFR" class="info" href="#infomodelo03">Share</a></div>
-            
+    return false"  title="Photo by Bin Thiều – Unsplash">(Photo by Bin Thiều – Unsplash)</a></p>
+<p class="etiqueta LES">Ejemplo<span style="color:#2E27A8"> – Mi hermana </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/XtgrHH8mQmk',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by Bin Thiều – Unsplash">(Foto de Bin Thiều – Unsplash)</a></p>
+<p class="etiqueta LFR">Exemple<span style="color:#2E27A8"> – Ma soeur </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/XtgrHH8mQmk',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by Bin Thiều – Unsplash">(Photo de Bin Thiều – Unsplash)</a></p>
+<a class="info LUK" href="#infomodelo03">Share</a>
+<a class="info LES" style="text-indent: -5rem;" href="#infomodelo03">Compartir</a>
+<a class="info LFR" style="text-indent: -4.25rem;" href="#infomodelo03">Partager</a>
+</div>
 
     <div class="container">
-    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/05/ari-sherbill-271159.jpg" alt="Photo by Ari Sherbill on Unsplash" title="Photo by Ari Sherbill on Unsplash">
+    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/05/ari-sherbill-271159.jpg" alt="Photo by Ari Sherbill – Unsplash" title="Photo by Ari Sherbill – Unsplash">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/05/PENDIENTE05_DRAW.jpg" alt="Scketch05" title="Scketch05">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/05/PENDIENTE05.jpg" alt="Earrings05" title="Earrings05">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/05/PENDIENTE05_MODEL2.jpg" alt="Model05" title="Model05">
-    <p class="etiqueta">Sample<span style="color:#2E27A8"> – My niece </span><br><a href=""
+<p class="etiqueta LUK">Sample<span style="color:#2E27A8"> – My niece </span><br><a href=""
     onclick="popUp=window.open(
         'https://unsplash.com/photos/f8v_KMOdg4A',
         'popupwindow',
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
-    return false"  title="Photo by Ari Sherbill on Unsplash">(Photo by Ari Sherbill on Unsplash)</a></p>
-    <a id="LFR" class="info" href="#infomodelo05">Share</a>
-  </div>
+    return false"  title="Photo by Ari Sherbill – Unsplash">(Photo by Ari Sherbill – Unsplash)</a></p>
+<p class="etiqueta LES">Ejemplo<span style="color:#2E27A8"> – Mi sobrina </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/f8v_KMOdg4A',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by Ari Sherbill – Unsplash">(Foto de Ari Sherbill – Unsplash)</a></p>
+    <p class="etiqueta LFR">Exemple<span style="color:#2E27A8"> – Ma nièce </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/f8v_KMOdg4A',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by Ari Sherbill – Unsplash">(Photo de Ari Sherbill – Unsplash)</a></p>
+<a class="info LUK" href="#infomodelo05">Share</a>
+<a class="info LES" style="text-indent: -5rem;" href="#infomodelo05">Compartir</a>
+<a class="info LFR" style="text-indent: -4.25rem;" href="#infomodelo05">Partager</a>  </div>
   <div class="container">
-    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/06/frank-mckenna-135726.jpg" alt="Photo by Frank Mckenna on Unsplash" title="Photo by Frank Mckenna on Unsplash">
+    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/06/frank-mckenna-135726.jpg" alt="Photo by Frank Mckenna – Unsplash" title="Photo by Frank Mckenna – Unsplash">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/06/PENDIENTE06_DRAW.jpg" alt="Scketch06" title="Scketch06">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/06/PENDIENTE06.jpg" alt="Earrings06" title="Earrings06">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/06/PENDIENTE06_MODEL2.jpg" alt="Model06" title="Model06">
-        <p class="etiqueta">Sample<span style="color:#2E27A8"> – My nephew </span><br><a href=""
+<p class="etiqueta LUK">Sample<span style="color:#2E27A8"> – My nephew </span><br><a href=""
     onclick="popUp=window.open(
         'https://unsplash.com/photos/3UeSNUlDKKY',
         'popupwindow',
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
-    return false"  title="Photo by Frank Mckenna on Unsplash">(Photo by Frank Mckenna on Unsplash)</a></p>
-        <a id="LFR" class="info" href="#infomodelo06">Share</a>
-        </div>
+    return false"  title="Photo by Frank Mckenna – Unsplash">(Photo by Frank Mckenna – Unsplash)</a></p>
+    <p class="etiqueta LES">Ejemplo<span style="color:#2E27A8"> – Mi sobrino </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/3UeSNUlDKKY',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by Frank Mckenna – Unsplash">(Foto de Frank Mckenna – Unsplash)</a></p>
+    <p class="etiqueta LFR">Exemple<span style="color:#2E27A8"> – Mon neveu </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/3UeSNUlDKKY',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by Frank Mckenna – Unsplash">(Photo de Frank Mckenna – Unsplash)</a></p>
+<a class="info LUK" href="#infomodelo06">Share</a>
+<a class="info LES" style="text-indent: -5rem;" href="#infomodelo06">Compartir</a>
+<a class="info LFR" style="text-indent: -4.25rem;" href="#infomodelo06">Partager</a>        </div>
 
             <div class="container">
-    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/08/chelsea-ferenando-214051.jpg" alt="Photo by Chelsea Ferenando on Unsplash" title="Photo by Chelsea Ferenando on Unsplash">
+    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/08/chelsea-ferenando-214051.jpg" alt="Photo by Chelsea Ferenando – Unsplash" title="Photo by Chelsea Ferenando – Unsplash">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/08/PENDIENTE08_DRAW.jpg" alt="Scketch08" title="Scketch08">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/08/PENDIENTE08.jpg" alt="Earrings08" title="Earrings08">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/08/PENDIENTE08_MODEL2.jpg" alt="Model08" title="Model08">
-            <p class="etiqueta">Sample<span style="color:#2E27A8"> – My baby </span><br><a href=""
+<p class="etiqueta LUK">Sample<span style="color:#2E27A8"> – My baby </span><br><a href=""
     onclick="popUp=window.open(
         'https://unsplash.com/photos/Qh0yZF1vKQA',
         'popupwindow',
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
-    return false"  title="Photo by Chelsea Ferenando on Unsplash">(Photo by Chelsea Ferenando on Unsplash)</a></p>
-        <a id="LFR" class="info" href="#infomodelo08">Share</a>
-  </div>
+    return false"  title="Photo by Chelsea Ferenando – Unsplash">(Photo by Chelsea Ferenando – Unsplash)</a></p>
+    <p class="etiqueta LES">Ejemplo<span style="color:#2E27A8"> – Mi bebé </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/Qh0yZF1vKQA',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by Chelsea Ferenando – Unsplash">(Foto de Chelsea Ferenando – Unsplash)</a></p>
+    <p class="etiqueta LFR">Exemple<span style="color:#2E27A8"> – Mon bébé </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/Qh0yZF1vKQA',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by Chelsea Ferenando – Unsplash">(Photo de Chelsea Ferenando – Unsplash)</a></p>
+<a class="info LUK" href="#infomodelo08">Share</a>
+<a class="info LES" style="text-indent: -5rem;" href="#infomodelo08">Compartir</a>
+<a class="info LFR" style="text-indent: -4.25rem;" href="#infomodelo08">Partager</a>  </div>
     <div class="container">
-    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/09/alexander-dummer-150646.jpg" alt="Photo by Alexander Dummer on Unsplash" title="Photo by Alexander Dummer on Unsplash">
+    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/09/alexander-dummer-150646.jpg" alt="Photo by Alexander Dummer – Unsplash" title="Photo by Alexander Dummer – Unsplash">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/09/PENDIENTE09_DRAW.jpg" alt="Scketch09" title="Scketch09">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/09/PENDIENTE09.jpg" alt="Earrings09" title="Earrings09">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/09/PENDIENTE09_MODEL2.jpg" alt="Model09" title="Model09">
-    <p class="etiqueta">Sample<span style="color:#2E27A8"> – My family </span><br><a href=""
+<p class="etiqueta LUK">Sample<span style="color:#2E27A8"> – My family </span><br><a href=""
     onclick="popUp=window.open(
         'https://unsplash.com/photos/UH-xs-FizTk',
         'popupwindow',
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
-    return false"  title="Photo by Alexander Dummer on Unsplash">(Photo by Alexander Dummer on Unsplash)</a></p>
-    <a id="LFR" class="info" href="#infomodelo09">Share</a>
-  </div>
+    return false"  title="Photo by Alexander Dummer – Unsplash">(Photo by Alexander Dummer – Unsplash)</a></p>
+    <p class="etiqueta LES">Ejemplo<span style="color:#2E27A8"> – Mi familia </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/UH-xs-FizTk',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by Alexander Dummer – Unsplash">(Foto de Alexander Dummer – Unsplash)</a></p>
+    <p class="etiqueta LFR">Exemple<span style="color:#2E27A8"> – Ma famille </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/UH-xs-FizTk',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by Alexander Dummer – Unsplash">(Photo de Alexander Dummer – Unsplash)</a></p>
+<a class="info LUK" href="#infomodelo09">Share</a>
+<a class="info LES" style="text-indent: -5rem;" href="#infomodelo09">Compartir</a>
+<a class="info LFR" style="text-indent: -4.25rem;" href="#infomodelo09">Partager</a>
+</div>
 
 <div class="container">
-    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/10/the-poodle-gang-369916.jpg" alt="Photo by Mirko Nicholson on Unsplash" title="Photo by Mirko Nicholson on Unsplash">
+    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/10/the-poodle-gang-369916.jpg" alt="Photo by Mirko Nicholson – Unsplash" title="Photo by Mirko Nicholson – Unsplash">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/10/PENDIENTE10_DRAW.jpg" alt="Scketch10" title="Scketch10">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/10/PENDIENTE10.jpg" alt="Earrings10" title="Earrings10">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/10/PENDIENTE10_MODEL2.jpg" alt="Model10" title="Model10">
-   <p class="etiqueta">Sample<span style="color:#2E27A8"> – My pet </span><br><a href=""
+<p class="etiqueta LUK">Sample<span style="color:#2E27A8"> – My pet </span><br><a href=""
     onclick="popUp=window.open(
         'https://unsplash.com/photos/R8TuZccyU_o',
         'popupwindow',
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
-    return false"  title="Photo by Mirko Nicholson on Unsplash">(Photo by Mirko Nicholson on Unsplash)</a></p>
-    <a id="LFR" class="info" href="#infomodelo10">Share</a>
-        </div>
+    return false"  title="Photo by Mirko Nicholson – Unsplash">(Photo by Mirko Nicholson – Unsplash)</a></p>
+<p class="etiqueta LES">Ejemplo<span style="color:#2E27A8"> – Mi mascota </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/R8TuZccyU_o',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by Mirko Nicholson – Unsplash">(Foto de Mirko Nicholson – Unsplash)</a></p>
+<p class="etiqueta LFR">Exemple<span style="color:#2E27A8"> – Ma mascotte </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/R8TuZccyU_o',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by Mirko Nicholson – Unsplash">(Photo de Mirko Nicholson – Unsplash)</a></p>
+<a class="info LUK" href="#infomodelo10">Share</a>
+<a class="info LES" style="text-indent: -5rem;" href="#infomodelo10">Compartir</a>
+<a class="info LFR" style="text-indent: -4.25rem;" href="#infomodelo10">Partager</a>        </div>
 
 <div class="container">
 
-    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/11/alexis-chloe-477593.jpg" alt="Photo by Alexis Chloe on Unsplash" title="Photo by Alexis Chloe on Unsplash">
+    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/11/alexis-chloe-477593.jpg" alt="Photo by Alexis Chloe – Unsplash" title="Photo by Alexis Chloe – Unsplash">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/11/PENDIENTE11_DRAW.jpg" alt="Scketch11" title="Scketch11">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/11/PENDIENTE11.jpg" alt="Earrings11" title="Earrings11">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/11/PENDIENTE11_MODEL2.jpg" alt="Model11" title="Model11">
-            <p class="etiqueta">Sample<span style="color:#2E27A8"> – My best friend </span><br><a href=""
+<p class="etiqueta LUK">Sample<span style="color:#2E27A8"> – My best friend </span><br><a href=""
     onclick="popUp=window.open(
         'https://unsplash.com/photos/m226gM3Bjwc',
         'popupwindow',
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
-    return false"  title="Photo by Alexis Chloe on Unsplash">(Photo by Alexis Chloe on Unsplash)</a></p>
-            <a id="LFR" class="info" href="#infomodelo11">Share</a>
-            </div>
+    return false"  title="Photo by Alexis Chloe – Unsplash">(Photo by Alexis Chloe – Unsplash)</a></p>
+    <p class="etiqueta LES">Ejemplo<span style="color:#2E27A8"> – Mi mejor amiga </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/m226gM3Bjwc',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by Alexis Chloe – Unsplash">(Foto de Alexis Chloe – Unsplash)</a></p>
+    <p class="etiqueta LFR">Exemple<span style="color:#2E27A8"> – Ma meilleure amie </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/m226gM3Bjwc',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by Alexis Chloe – Unsplash">(Photo de Alexis Chloe – Unsplash)</a></p>
+<a class="info LUK" href="#infomodelo11">Share</a>
+<a class="info LES" style="text-indent: -5rem;" href="#infomodelo11">Compartir</a>
+<a class="info LFR" style="text-indent: -4.25rem;" href="#infomodelo11">Partager</a>            </div>
 <div class="container">
-    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/13/jp-kxkl-430130.jpg" alt="Photo by Jared Sluyter on Unsplash" title="Photo by Jared Sluyter on Unsplash">
+    <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/13/jp-kxkl-430130.jpg" alt="Photo by Jared Sluyter – Unsplash" title="Photo by Jared Sluyter – Unsplash">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/13/PENDIENTE13_DRAW.jpg" alt="Scketch12" title="Scketch12">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/13/PENDIENTE13.jpg" alt="Earrings12" title="Earrings12">
     <img class="photo" src="https://rawgit.com/avatarete/avataretes/gh-pages/FOTOS/13/PENDIENTE13_MODEL2.jpg" alt="Model12" title="Model12">
-<p class="etiqueta">Sample<span style="color:#2E27A8"> – My daughter </span><br><a href=""
+<p class="etiqueta LUK">Sample<span style="color:#2E27A8"> – My daughter </span><br><a href=""
     onclick="popUp=window.open(
         'https://unsplash.com/photos/JHyAiRMi5Fk',
         'popupwindow',
         'scrollbars=yes,width=800,height=400');
     popUp.focus();
-    return false"  title="Photo by jp kxkl on Unsplash">(Photo by jp kxkl on Unsplash)</a></p>
-<a id="LFR" class="info" href="#infomodelo12">Share</a>
-</div>
+    return false"  title="Photo by jp kxkl – Unsplash">(Photo by jp kxkl – Unsplash)</a></p>
+    <p class="etiqueta LES">Ejemplo<span style="color:#2E27A8"> – Mi hija </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/JHyAiRMi5Fk',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by jp kxkl – Unsplash">(Foto de jp kxkl – Unsplash)</a></p>
+    <p class="etiqueta LFR">Exemple<span style="color:#2E27A8"> – Ma fille </span><br><a href=""
+    onclick="popUp=window.open(
+        'https://unsplash.com/photos/JHyAiRMi5Fk',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false"  title="Photo by jp kxkl – Unsplash">(Photo de jp kxkl – Unsplash)</a></p>
+<a class="info LUK" href="#infomodelo12">Share</a>
+<a class="info LES" style="text-indent: -5rem;" href="#infomodelo12">Compartir</a>
+<a class="info LFR" style="text-indent: -4.25rem;" href="#infomodelo12">Partager</a></div>
 
 <div id="ZOCALO"></div>
 </div>
 <footer class="BOTONERA">
-<div><!-- www.123formbuilder.com script begins here-->
+<div class="contacto LUK"><!-- www.123formbuilder.com script begins here-->
 <script defer src="//www.123formbuilder.com/embed/3310200.js?type=lightbox" data-role="form" data-default-width="650px" data-embed-type="lightbox-text-link" data-embed-text-link="Contact us"></script>
+
+<div class="contacto LES"><!-- www.123formbuilder.com script begins here-->
+<script defer src="//www.123formbuilder.com/embed/3310200.js?type=lightbox" data-role="form" data-default-width="650px" data-embed-type="lightbox-text-link" data-embed-text-link="Contáctanos"></script>
+
+
+<div class="contacto LFR"><!-- www.123formbuilder.com script begins here-->
+<script defer src="//www.123formbuilder.com/embed/3310200.js?type=lightbox" data-role="form" data-default-width="650px" data-embed-type="lightbox-text-link" data-embed-text-link="Contactez-nous"></script>
 <!-- www.123formbuilder.com script ends here -->
 </div><div>
 <!--FOLLOW FOOTER-->
