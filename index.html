@@ -63,10 +63,10 @@ $('img').bind('contextmenu', function(e) {
 <script>
 $(document).ready(function() {
 
-var display = function(block_name, title) {
-  // Toogle Block
-  $('.CENTER').css('display', 'none');
-  $('#' + block_name + '').css('display', 'block');
+var display = function(block_name) {
+  $('.CENTER, .info, .etiqueta, .BUTTON').css('display', 'none');
+  $('#' + block_name).css('display', 'block');
+  $('.' + block_name).css('display', 'block');
 }
 
 $('.UK').on('click', function() {
@@ -83,37 +83,13 @@ $('.FR').on('click', function() {
 });
 
 </script>
-
-<script>
-$(document).ready(function() {
-
-var display = function(block_name, title) {
-  $('.info, .etiqueta, .BUTTON').css('display', 'none');
-  $('.' + block_name + '').css('display', 'block');
-}
-
-$('.UK').on('click', function() {
-  display('LUK', $(this));
-});
-
-$('.ES').on('click', function() {
-  display('LES', $(this));
-});
-
-$('.FR').on('click', function() {
-  display('LFR', $(this));
-});
-});
-
-</script>
-
 
 <!--<script>
 $(document).ready(function() {
 
-var display = function(block_name, title) {
-  $('.etiqueta').css('display', 'none');
-  $('.' + block_name + '').css('display', 'block');
+var display = function(block_name) {
+  $('.info, .etiqueta, .BUTTON').css('display', 'none');
+  $('.' + block_name).css('display', 'block');
 }
 
 $('.UK').on('click', function() {
@@ -131,12 +107,12 @@ $('.FR').on('click', function() {
 
 </script>-->
 
+
+
+
 <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="styles/main.css"/>
 
-
-<style>
-</style>
 </head>
 
 
