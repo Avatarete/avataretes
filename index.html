@@ -88,7 +88,7 @@ $('.FR').on('click', function() {
 $(document).ready(function() {
 
 var display = function(block_name, title) {
-  $('.info, .etiqueta').css('display', 'none');
+  $('.info, .etiqueta, .BUTTON').css('display', 'none');
   $('.' + block_name + '').css('display', 'block');
 }
 
@@ -135,9 +135,7 @@ $('.FR').on('click', function() {
 <link type="text/css" rel="stylesheet" href="styles/main.css"/>
 
 
-<style>#LUK {display:block;}
-.LES, .LFR {display:none;}
-.LUK {display:block;}
+<style>
 </style>
 </head>
 
@@ -183,7 +181,7 @@ $('.FR').on('click', function() {
 <div class="BOTONERA TOP">
 <div class="column column-one">
 <input type="checkbox" id="menu_buy_id" class="menu_buy">
-<label for="menu_buy_id" class="" onclick="if(document.getElementById('menu_buy_id').value) document.getElementById('menu_share_id').checked = false; if(document.getElementById('menu_buy_id').value) document.getElementById('menu_lang_id').checked = false;"><h4 class="BUTTON">Buy on:</h4></label>
+<label for="menu_buy_id" class="" onclick="if(document.getElementById('menu_buy_id').value) document.getElementById('menu_share_id').checked = false; if(document.getElementById('menu_buy_id').value) document.getElementById('menu_lang_id').checked = false;"><h4 style="line-height: 0"><nav class="BUTTON LUK">Buy on:</nav><nav class="BUTTON LES">Comprar es:</nav><nav class="BUTTON LFR">Acheter:</nav></h4></label>
 <a class="ETSY link_general" onclick="popUp=window.open(
         'https://www.etsy.com/es/shop/Avatarete',
         'popupwindow',
@@ -194,7 +192,7 @@ $('.FR').on('click', function() {
 
 <div class="column column-two">
 <input type="checkbox" id="menu_lang_id" class="menu_lang">
-<label for="menu_lang_id" class="" onclick="if(document.getElementById('menu_lang_id').value) document.getElementById('menu_share_id').checked = false; if(document.getElementById('menu_lang_id').value) document.getElementById('menu_buy_id').checked = false;"><h4 class="BUTTON">Language:</h4></label>
+<label for="menu_lang_id" class="" onclick="if(document.getElementById('menu_lang_id').value) document.getElementById('menu_share_id').checked = false; if(document.getElementById('menu_lang_id').value) document.getElementById('menu_buy_id').checked = false;"><h4 style="line-height: 0"><div class="BUTTON LUK">Language:</div><div class="BUTTON LES">Idioma:</div><div class="BUTTON LFR">Langue:</div></h4></label>
 
 <a class="UK link_general" href="#">
 </a>
@@ -206,7 +204,7 @@ $('.FR').on('click', function() {
 
 <div class="column column-three">
 <input type="checkbox" id="menu_share_id" class="menu_share">
-<label for="menu_share_id" class=""  onclick="if(document.getElementById('menu_share_id').value) document.getElementById('menu_buy_id').checked = false; if(document.getElementById('menu_share_id').value) document.getElementById('menu_lang_id').checked = false;"><h4 class="BUTTON">Share:</h4></label>
+<label for="menu_share_id" class=""  onclick="if(document.getElementById('menu_share_id').value) document.getElementById('menu_buy_id').checked = false; if(document.getElementById('menu_share_id').value) document.getElementById('menu_lang_id').checked = false;"><h4 style="line-height: 0"><div class="BUTTON LUK">Share:</div><div class="BUTTON LES">Compartir:</div><div class="BUTTON LFR">Partager:</div></h4></label>
 
 <a class="FCBK link_general" rel="img_src" href=""
     onclick="popUp=window.open(
