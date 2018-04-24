@@ -94,6 +94,19 @@ box-sizing:border-box;
 height: 16rem;
 width: 100%;
 }
+.MARCOILU {display: -webkit-flex;
+display: -ms-flexbox; 
+display: flex; 
+overflow: hidden;
+position: relative;
+-ms-flex-preferred-size:100%;
+flex-basis:100%;
+float:left;
+max-height: 100%;
+justify-content: space-between;
+box-sizing:border-box;
+width: 100%;
+}
 
 .ILUSTRACIONES {width:100%; margin: 0; padding: 0; display:block;}
 
